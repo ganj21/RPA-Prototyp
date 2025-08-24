@@ -1,0 +1,11 @@
+{
+    "Test1": {
+      "type": "cron",
+      "cron": "0 9 * * 1"
+    },
+    "Test2": {
+      "type": "once",
+      "datetime": "2025-08-22T08:00:00"
+    }
+  }
+  

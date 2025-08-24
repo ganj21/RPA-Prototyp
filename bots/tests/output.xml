@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.1 on darwin)" generated="2025-08-20T22:13:45.369838" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Click" source="/Users/yelwan/rpa-prototyp-v2/bots/tests/test_click.robot">
+<test id="s1-t1" name="Click Test" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-20T22:13:45.481132" level="INFO">Opening browser 'firefox' to base url 'https://quotes.toscrape.com'.</msg>
+<arg>https://quotes.toscrape.com</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-20T22:13:45.480995" elapsed="3.876348"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-20T22:13:49.357981" elapsed="0.518641"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2025-08-20T22:13:59.995604" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-20T22:13:59.995755" level="FAIL">Element 'span.tag-item:nth-child(2) &gt; a:nth-child(1)' did not appear in 10 seconds.</msg>
+<arg>span.tag-item:nth-child(2) &gt; a:nth-child(1)</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2025-08-20T22:13:49.876804" elapsed="10.121057">Element 'span.tag-item:nth-child(2) &gt; a:nth-child(1)' did not appear in 10 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>a.tag[href="/tag/love/"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-08-20T22:13:59.998043" elapsed="0.000025"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-08-20T22:13:59.998159" elapsed="0.000019"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-08-20T22:13:59.998238" elapsed="0.000014"/>
+</kw>
+<status status="FAIL" start="2025-08-20T22:13:45.480408" elapsed="14.517970">Element 'span.tag-item:nth-child(2) &gt; a:nth-child(1)' did not appear in 10 seconds.</status>
+</test>
+<status status="FAIL" start="2025-08-20T22:13:45.370803" elapsed="14.627876"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Click" id="s1" pass="0" fail="1" skip="0">Test Click</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.1 on darwin)" generated="2025-08-23T22:10:16.376340" rpa="false" schemaversion="5">
+<suite id="s1" name="Generated" source="/Users/yelwan/rpa-prototyp-v2/backend/../artifacts/generated.robot">
+<test id="s1-t1" name="Generated Workflow" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-23T22:10:16.527454" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-23T22:10:16.527299" elapsed="2.453380"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-08-23T22:10:18.981358" level="INFO">Opening url 'https://quotes.toscrape.com/page/2/'</msg>
+<arg>https://quotes.toscrape.com/page/2/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-08-23T22:10:18.981147" elapsed="0.937069"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2025-08-23T22:10:30.178500" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-23T22:10:30.178649" level="FAIL">Element 'p.text-muted a' did not appear in 10 seconds.</msg>
+<arg>p.text-muted a</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2025-08-23T22:10:19.918357" elapsed="10.262968">Element 'p.text-muted a' did not appear in 10 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>p.text-muted a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-08-23T22:10:30.181455" elapsed="0.000023"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-08-23T22:10:30.181533" elapsed="0.000014"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-08-23T22:10:30.181598" elapsed="0.000013"/>
+</kw>
+<kw name="@Albert_quote=">
+<arg>Get Texts</arg>
+<arg>div.quote:nth-child(5) &gt; div:nth-child(1) &gt; div:nth-child(2)</arg>
+<status status="NOT RUN" start="2025-08-23T22:10:30.181723" elapsed="0.000021"/>
+</kw>
+<kw name="Append List To File">
+<arg>albert.txt</arg>
+<arg>${Albert_quote}</arg>
+<status status="NOT RUN" start="2025-08-23T22:10:30.181807" elapsed="0.000012"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-08-23T22:10:30.181865" elapsed="0.000012"/>
+</kw>
+<status status="FAIL" start="2025-08-23T22:10:16.526644" elapsed="13.655372">Element 'p.text-muted a' did not appear in 10 seconds.</status>
+</test>
+<status status="FAIL" start="2025-08-23T22:10:16.377482" elapsed="13.804950"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Generated" id="s1" pass="0" fail="1" skip="0">Generated</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

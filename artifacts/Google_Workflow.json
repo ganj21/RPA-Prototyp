@@ -1,0 +1,39 @@
+{
+  "name": "Google_Workflow",
+  "nodes": [
+    {
+      "id": "4",
+      "type": "input",
+      "position": {
+        "x": 115.06797710966634,
+        "y": 148.18155495554697
+      },
+      "data": {
+        "label": "Input Node",
+        "selector": "#APjFqb",
+        "inputText": "Funny Animal Pictures"
+      }
+    },
+    {
+      "id": "5",
+      "type": "navigate",
+      "position": {
+        "x": 183.52785186102182,
+        "y": 13.471722219096137
+      },
+      "data": {
+        "label": "Navigate Node",
+        "url": "google.com"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "5",
+      "sourceHandle": null,
+      "target": "4",
+      "targetHandle": null,
+      "id": "reactflow__edge-5-4"
+    }
+  ]
+}

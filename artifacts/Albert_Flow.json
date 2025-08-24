@@ -1,0 +1,133 @@
+{
+  "name": "Albert_Flow",
+  "nodes": [
+    {
+      "id": "1",
+      "position": {
+        "x": 49,
+        "y": -25.5
+      },
+      "data": {
+        "label": "Start Node"
+      }
+    },
+    {
+      "id": "3",
+      "position": {
+        "x": 438.8597322524656,
+        "y": 682.9781631345659
+      },
+      "data": {
+        "label": "End Node"
+      }
+    },
+    {
+      "id": "4",
+      "type": "navigate",
+      "position": {
+        "x": 86.12810134125846,
+        "y": 80.3463725935813
+      },
+      "data": {
+        "label": "Navigate Node",
+        "url": "https://quotes.toscrape.com/page/2/"
+      }
+    },
+    {
+      "id": "6",
+      "type": "click",
+      "position": {
+        "x": -47.02616202786112,
+        "y": 206.83338093605033
+      },
+      "data": {
+        "label": "Click Node",
+        "selector": "p.text-muted a"
+      }
+    },
+    {
+      "id": "7",
+      "type": "input",
+      "position": {
+        "x": 130.79307556376284,
+        "y": 335.97553807695454
+      },
+      "data": {
+        "label": "Input Node",
+        "selector": "#explore_search_query",
+        "inputText": "Albert Einstein"
+      }
+    },
+    {
+      "id": "8",
+      "type": "parse",
+      "position": {
+        "x": -149.71267646607492,
+        "y": 464.837272240632
+      },
+      "data": {
+        "label": "Parse Node",
+        "selector": "div.quote:nth-child(5) > div:nth-child(1) > div:nth-child(2)",
+        "attribute": "text",
+        "variableName": "Albert_quote"
+      }
+    },
+    {
+      "id": "9",
+      "type": "store",
+      "position": {
+        "x": 65.21559551958575,
+        "y": 588.7703839970173
+      },
+      "data": {
+        "label": "Store Node",
+        "variableName": "Albert_quote",
+        "filename": "albert.txt"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "1",
+      "sourceHandle": null,
+      "target": "4",
+      "targetHandle": null,
+      "id": "reactflow__edge-1-4"
+    },
+    {
+      "source": "4",
+      "sourceHandle": null,
+      "target": "6",
+      "targetHandle": null,
+      "id": "reactflow__edge-4-6"
+    },
+    {
+      "source": "6",
+      "sourceHandle": null,
+      "target": "7",
+      "targetHandle": null,
+      "id": "reactflow__edge-6-7"
+    },
+    {
+      "source": "7",
+      "sourceHandle": null,
+      "target": "8",
+      "targetHandle": null,
+      "id": "reactflow__edge-7-8"
+    },
+    {
+      "source": "8",
+      "sourceHandle": null,
+      "target": "9",
+      "targetHandle": null,
+      "id": "reactflow__edge-8-9"
+    },
+    {
+      "source": "9",
+      "sourceHandle": null,
+      "target": "3",
+      "targetHandle": null,
+      "id": "reactflow__edge-9-3"
+    }
+  ]
+}

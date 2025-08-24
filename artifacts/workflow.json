@@ -1,0 +1,112 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "position": {
+        "x": 212.5,
+        "y": -63
+      },
+      "data": {
+        "label": "Start Node"
+      }
+    },
+    {
+      "id": "3",
+      "position": {
+        "x": 180.58142644459065,
+        "y": 517.8445379962488
+      },
+      "data": {
+        "label": "End Node"
+      }
+    },
+    {
+      "id": "5",
+      "type": "navigate",
+      "position": {
+        "x": 196.37926217003314,
+        "y": 40.36724098748619
+      },
+      "data": {
+        "label": "Navigate Node",
+        "url": "https://quotes.toscrape.com"
+      }
+    },
+    {
+      "id": "8",
+      "type": "parse",
+      "position": {
+        "x": 45.401981414564034,
+        "y": 297.6165872475472
+      },
+      "data": {
+        "label": "Parse Node",
+        "selector": "span.text",
+        "attribute": "text",
+        "variableName": "love_quote"
+      }
+    },
+    {
+      "id": "9",
+      "type": "store",
+      "position": {
+        "x": 114.66084201842949,
+        "y": 395.72885706199634
+      },
+      "data": {
+        "label": "Store Node",
+        "variableName": "love_quote",
+        "filename": "love_quote.txt"
+      }
+    },
+    {
+      "id": "10",
+      "type": "click",
+      "position": {
+        "x": 196.88684358828755,
+        "y": 163.8106777079672
+      },
+      "data": {
+        "label": "Click Node",
+        "selector": "a.tag[href=\"/tag/love/\"]"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "1",
+      "sourceHandle": null,
+      "target": "5",
+      "targetHandle": null,
+      "id": "reactflow__edge-1-5"
+    },
+    {
+      "source": "8",
+      "sourceHandle": null,
+      "target": "9",
+      "targetHandle": null,
+      "id": "reactflow__edge-8-9"
+    },
+    {
+      "source": "9",
+      "sourceHandle": null,
+      "target": "3",
+      "targetHandle": null,
+      "id": "reactflow__edge-9-3"
+    },
+    {
+      "source": "5",
+      "sourceHandle": null,
+      "target": "10",
+      "targetHandle": null,
+      "id": "reactflow__edge-5-10"
+    },
+    {
+      "source": "10",
+      "sourceHandle": null,
+      "target": "8",
+      "targetHandle": null,
+      "id": "reactflow__edge-10-8"
+    }
+  ]
+}
